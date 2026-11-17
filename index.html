@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>apum-sdk-demo | Interactive demo: apum_sdk (Trust) — Ed25519 signatures for audit trail, W3C VC-ready.</title>
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="apum-sdk-demo" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Interactive demo: apum_sdk (Trust) — Ed25519 signatures for audit trail, W3C VC-ready." />
+<meta property="og:description" content="Interactive demo: apum_sdk (Trust) — Ed25519 signatures for audit trail, W3C VC-ready." />
+<link rel="canonical" href="https://apumiaaifund.github.io/apum-sdk-demo/" />
+<meta property="og:url" content="https://apumiaaifund.github.io/apum-sdk-demo/" />
+<meta property="og:site_name" content="apum-sdk-demo" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="apum-sdk-demo" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebSite","description":"Interactive demo: apum_sdk (Trust) — Ed25519 signatures for audit trail, W3C VC-ready.","headline":"apum-sdk-demo","name":"apum-sdk-demo","url":"https://apumiaaifund.github.io/apum-sdk-demo/"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <link rel="stylesheet" href="/apum-sdk-demo/assets/css/style.css?v=e21b283f760060924ea4511f208743cb6519a16b">
+    <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
+
+<!-- Setup Google Analytics -->
+
+
+
+<!-- You can set your favicon here -->
+<!-- link rel="shortcut icon" type="image/x-icon" href="/apum-sdk-demo/favicon.ico" -->
+
+<!-- end custom head snippets -->
+
+  </head>
+  <body>
+    <div class="container-lg px-3 my-5 markdown-body">
+      
+      <h1><a href="https://apumiaaifund.github.io/apum-sdk-demo/">apum-sdk-demo</a></h1>
+      
+
+      <p align="center">
+  <img src="docs/logo.png" alt="apum-sdk-demo" width="200" />
+</p>
+
+<h1 align="center">apum-sdk-demo</h1>
+
+<p align="center"><b>Interactive demo: apum_sdk (Trust) — Ed25519 signatures for audit trail, W3C VC-ready.</b></p>
+
+<h2 id="overview">Overview</h2>
+<p>Public demo for APUM AI Fund. Flagship: <a href="https://github.com/apumiaaifund/apumia_credit">apumia_credit</a>.</p>
+
+
+      
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js" integrity="sha256-lZaRhKri35AyJSypXXs4o6OPFTbTmUoltBbDCbdzegg=" crossorigin="anonymous"></script>
+    <script>anchors.add();</script>
+  <div style="max-width:780px;margin:16px auto;padding:0 16px">
+<div id="eng-bar" style="margin:12px 0;padding:10px;background:#0f172a;border:1px solid #334155;border-radius:8px;display:flex;gap:8px;flex-wrap:wrap;align-items:center">
+  <label style="background:#1e293b;color:#93c5fd;border:1px solid #475569;border-radius:6px;padding:6px 10px;font-size:12px;font-weight:700;cursor:pointer">📂 Загрузить .json / .csv<input type="file" accept=".json,.csv,.txt" style="display:none" onchange="window._engLoad(this)"></label>
+  <button type="button" onclick="window._engPreset(true)" style="background:#064e3b;color:#6ee7b7;border:1px solid #059669;border-radius:6px;padding:6px 10px;font-size:12px;font-weight:700;cursor:pointer">✅ Тест: Валидные данные</button>
+  <button type="button" onclick="window._engPreset(false)" style="background:#7f1d1d;color:#fca5a5;border:1px solid #dc2626;border-radius:6px;padding:6px 10px;font-size:12px;font-weight:700;cursor:pointer">⛔ Тест: Нарушение правила</button>
+  <span id="eng-fn" style="font-size:12px;color:#94a3b8"></span>
+</div>
+<textarea style="width:100%;height:90px;background:#030712;color:#a7f3d0;border:1px solid #374151;border-radius:8px;padding:10px;font-family:monospace">{"verified":true}</textarea></div><script>
+(function(){
+  function tgt(){return document.querySelector('textarea')||document.querySelector('input[type=text]');}
+  function run(){var b=Array.from(document.querySelectorAll('button')).find(function(x){return /проверить|verify|check|run|сертифик/i.test(x.textContent||'');});if(b)b.click();}
+  window._engPreset=function(ok){var t=tgt();if(!t)return;t.value=ok?JSON.stringify({status:"valid",verified:true,amount:15000,kex:"ML-KEM-768",human_oversight:true,quorum_nodes:5},null,2):JSON.stringify({status:"violation",verified:false,amount:-500,kex:"RSA-2048",human_oversight:false,quorum_nodes:1},null,2);run();};
+  window._engLoad=function(inp){var f=inp.files&&inp.files;if(!f)return;var fn=document.getElementById('eng-fn');if(fn)fn.textContent=f.name;var r=new FileReader();r.onload=function(e){var raw=String(e.target.result||'').trim();if(f.name.toLowerCase().endsWith('.csv')&&raw.charAt(0)!=='{'){var ls=raw.split(/\r?\n/).filter(Boolean);if(ls.length>=2){var ks=ls.split(','),vs=ls.split(','),o={};ks.forEach(function(k,i){var v=(vs[i]||'').trim(),n=Number(v);o[k.trim()]=isNaN(n)?(v==='true'?true:(v==='false'?false:v)):n;});raw=JSON.stringify(o,null,2);}}var t=tgt();if(t){t.value=raw;run();}};r.readAsText(f);};
+})();
+</script></body>
+</html>
